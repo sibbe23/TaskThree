@@ -1,0 +1,268 @@
+{
+  "C:\\Users\\sibbe\\Desktop\\TaskThree": {
+    "versionSfCore": null,
+    "versionFramework": "4.4.4",
+    "isWithinCompose": false,
+    "isCompose": false,
+    "composeOrgName": null,
+    "composeResolverProviders": {
+      "default-aws-credential-resolver": "<REDACTED>",
+      "opt": {
+        "instance": {
+          "credentials": "<REDACTED>",
+          "serviceConfigFile": {
+            "service": "user-api",
+            "frameworkVersion": "4",
+            "provider": {
+              "name": "aws",
+              "runtime": "nodejs20.x",
+              "region": "us-east-1",
+              "stage": "dev",
+              "environment": {
+                "MYSQL_DB": "aws_test",
+                "MYSQL_USER": "root",
+                "MYSQL_PASSWORD": "<REDACTED>",
+                "MYSQL_HOST": "localhost"
+              },
+              "versionFunctions": true
+            },
+            "functions": {
+              "createUser": {
+                "handler": "createUser.handler",
+                "events": [
+                  {
+                    "http": {
+                      "path": "user",
+                      "method": "post"
+                    }
+                  }
+                ]
+              },
+              "deleteUser": {
+                "handler": "deleteUser.handler",
+                "events": [
+                  {
+                    "http": {
+                      "path": "user",
+                      "method": "delete"
+                    }
+                  }
+                ]
+              }
+            },
+            "plugins": [
+              "serverless-offline"
+            ]
+          },
+          "configFileDirPath": "C:\\Users\\sibbe\\Desktop\\TaskThree",
+          "config": {
+            "type": "opt"
+          },
+          "options": {
+            "stage": "dev"
+          },
+          "stage": "dev",
+          "dashboard": null,
+          "logger": {
+            "namespace": "s:core:resolver:opt",
+            "prefix": null,
+            "prefixColor": null
+          },
+          "_credentialsPromise": "<REDACTED>"
+        },
+        "resolvers": {}
+      },
+      "env": {
+        "instance": {
+          "credentials": "<REDACTED>",
+          "serviceConfigFile": {
+            "service": "user-api",
+            "frameworkVersion": "4",
+            "provider": {
+              "name": "aws",
+              "runtime": "nodejs20.x",
+              "region": "us-east-1",
+              "stage": "dev",
+              "environment": {
+                "MYSQL_DB": "aws_test",
+                "MYSQL_USER": "root",
+                "MYSQL_PASSWORD": "<REDACTED>",
+                "MYSQL_HOST": "localhost"
+              },
+              "versionFunctions": true
+            },
+            "functions": {
+              "createUser": {
+                "handler": "createUser.handler",
+                "events": [
+                  {
+                    "http": {
+                      "path": "user",
+                      "method": "post"
+                    }
+                  }
+                ]
+              },
+              "deleteUser": {
+                "handler": "deleteUser.handler",
+                "events": [
+                  {
+                    "http": {
+                      "path": "user",
+                      "method": "delete"
+                    }
+                  }
+                ]
+              }
+            },
+            "plugins": [
+              "serverless-offline"
+            ]
+          },
+          "configFileDirPath": "C:\\Users\\sibbe\\Desktop\\TaskThree",
+          "config": {
+            "type": "env"
+          },
+          "options": {
+            "stage": "dev"
+          },
+          "stage": "dev",
+          "dashboard": null,
+          "logger": {
+            "namespace": "s:core:resolver:env",
+            "prefix": null,
+            "prefixColor": null
+          },
+          "_credentialsPromise": "<REDACTED>"
+        },
+        "resolvers": {}
+      }
+    },
+    "composeServiceName": null,
+    "servicePath": "C:\\Users\\sibbe\\Desktop\\TaskThree",
+    "serviceConfigFileName": "serverless.yml",
+    "service": {
+      "service": "user-api",
+      "frameworkVersion": "4",
+      "provider": {
+        "name": "aws",
+        "runtime": "nodejs20.x",
+        "region": "us-east-1",
+        "stage": "dev",
+        "environment": {
+          "MYSQL_DB": "aws_test",
+          "MYSQL_USER": "root",
+          "MYSQL_PASSWORD": "<REDACTED>",
+          "MYSQL_HOST": "localhost"
+        },
+        "versionFunctions": true
+      },
+      "functions": {
+        "createUser": {
+          "handler": "createUser.handler",
+          "events": [
+            {
+              "http": {
+                "path": "user",
+                "method": "post"
+              }
+            }
+          ]
+        },
+        "deleteUser": {
+          "handler": "deleteUser.handler",
+          "events": [
+            {
+              "http": {
+                "path": "user",
+                "method": "delete"
+              }
+            }
+          ]
+        }
+      },
+      "plugins": [
+        "serverless-offline"
+      ]
+    },
+    "serviceRawFile": "service: user-api\r\nframeworkVersion: '4'\r\n\r\nprovider:\r\n  name: aws\r\n  runtime: nodejs20.x\r\n  region: us-east-1\r\n  stage: ${opt:stage ,'dev'}\r\n  environment:\r\n    MYSQL_DB: ${env:MYSQL_DB}\r\n    MYSQL_USER: ${env:MYSQL_USER}\r\n    MYSQL_PASSWORD: ${env:MYSQL_PASSWORD}\r\n    MYSQL_HOST: ${env:MYSQL_HOST}\r\n\r\nfunctions:\r\n  createUser:\r\n    handler: createUser.handler\r\n    events:\r\n      - http:\r\n          path: user\r\n          method: post\r\n\r\n  deleteUser:\r\n    handler: deleteUser.handler\r\n    events:\r\n      - http:\r\n          path: user\r\n          method: delete\r\n\r\nplugins:\r\n  - serverless-offline\r\n",
+    "command": [
+      "offline"
+    ],
+    "options": {
+      "stage": "dev"
+    },
+    "error": {
+      "message": "Serverless plugin \"serverless-offline\" not found. Make sure it's installed and listed in the \"plugins\" section of your serverless config file. Use the --debug flag to learn more.",
+      "stack": "ServerlessError2: Serverless plugin \"serverless-offline\" not found. Make sure it's installed and listed in the \"plugins\" section of your serverless config file. Use the --debug flag to learn more.\n    at PluginManager.resolveServicePlugins (file:///C:/Users/sibbe/.serverless/releases/4.4.4/package/dist/sf-core.js:915:2671)\n    at async PluginManager.loadAllPlugins (file:///C:/Users/sibbe/.serverless/releases/4.4.4/package/dist/sf-core.js:915:1293)\n    at async Serverless.init (file:///C:/Users/sibbe/.serverless/releases/4.4.4/package/dist/sf-core.js:922:9930)\n    at async runFramework (file:///C:/Users/sibbe/.serverless/releases/4.4.4/package/dist/sf-core.js:945:1262)\n    at async route (file:///C:/Users/sibbe/.serverless/releases/4.4.4/package/dist/sf-core.js:973:13954)\n    at async Object.run2 [as run] (file:///C:/Users/sibbe/.serverless/releases/4.4.4/package/dist/sf-core.js:973:14355)\n    at async run3 (file:///C:/Users/sibbe/.serverless/releases/4.4.4/package/dist/sf-core.js:973:15617)",
+      "code": "PLUGIN_NOT_FOUND"
+    },
+    "params": {},
+    "machineId": "60fe38481e1ae8c8bffc81c7db182862",
+    "stage": "dev",
+    "accessKeyV2": "<REDACTED>",
+    "accessKeyV1": "<REDACTED>",
+    "orgId": "47bc29d4-ddfe-44b2-a252-5714cdf12947",
+    "orgName": "01102024",
+    "userId": "mRWTysn2xxhJJ4bWFB",
+    "dashboard": {
+      "isEnabledForService": false,
+      "requiredAuthentication": false,
+      "orgFeaturesInUse": null,
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": null,
+      "serviceProvider": null,
+      "instanceParameters": null
+    },
+    "userName": "01102024",
+    "subscription": null,
+    "userEmail": "sibbenanthan.kirubaharan@lystloc.com",
+    "serviceProviderAwsRegion": "us-east-1",
+    "serviceProviderAwsCredentials": "<REDACTED>",
+    "serviceProviderAwsAccountId": "519246633553",
+    "projectType": "traditional",
+    "versionSf": "4.4.4",
+    "serviceUniqueId": "arn:aws:cloudformation:us-east-1:519246633553:stack/user-api-prod/25a45160-845f-11ef-8592-0afff326cfdb",
+    "serviceProviderAwsCfStackId": "arn:aws:cloudformation:us-east-1:519246633553:stack/user-api-prod/25a45160-845f-11ef-8592-0afff326cfdb",
+    "serviceProviderAwsCfStackCreated": "2024-10-07T03:49:26.140Z",
+    "serviceProviderAwsCfStackUpdated": "2024-10-07T04:18:03.307Z",
+    "serviceProviderAwsCfStackStatus": "UPDATE_COMPLETE",
+    "serviceProviderAwsCfStackOutputs": [
+      {
+        "OutputKey": "DeleteUserLambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:us-east-1:519246633553:function:user-api-prod-deleteUser:4",
+        "Description": "Current Lambda function version",
+        "ExportName": "sls-user-api-prod-DeleteUserLambdaFunctionQualifiedArn"
+      },
+      {
+        "OutputKey": "UpdateUserLambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:us-east-1:519246633553:function:user-api-prod-updateUser:4",
+        "Description": "Current Lambda function version",
+        "ExportName": "sls-user-api-prod-UpdateUserLambdaFunctionQualifiedArn"
+      },
+      {
+        "OutputKey": "CreateUserLambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:us-east-1:519246633553:function:user-api-prod-createUser:4",
+        "Description": "Current Lambda function version",
+        "ExportName": "sls-user-api-prod-CreateUserLambdaFunctionQualifiedArn"
+      },
+      {
+        "OutputKey": "GetUserLambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:us-east-1:519246633553:function:user-api-prod-getUser:4",
+        "Description": "Current Lambda function version",
+        "ExportName": "sls-user-api-prod-GetUserLambdaFunctionQualifiedArn"
+      },
+      {
+        "OutputKey": "ServiceEndpoint",
+        "OutputValue": "https://w0uda8brjj.execute-api.us-east-1.amazonaws.com/prod",
+        "Description": "URL of the service endpoint",
+        "ExportName": "sls-user-api-prod-ServiceEndpoint"
+      },
+      {
+        "OutputKey": "ServerlessDeploymentBucketName",
+        "OutputValue": "serverless-framework-deployments-us-east-1-f131054f-d04e",
+        "ExportName": "sls-user-api-prod-ServerlessDeploymentBucketName"
+      }
+    ]
+  }
+}
